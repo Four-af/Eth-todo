@@ -1,0 +1,21 @@
+#Listing Tasks
+1) List tasks in smart contracts
+2) List tasks in the console
+3) List tasks in the client side application
+4) List tasks in the test
+
+
+
+#compiling, migration, deployeing
+```
+truffle compile
+truffle migrate
+truffle migrate --reset //deploy a new copy of the smart contract if an already existing one is there
+//deploys a new copy
+
+truffle console
+
+truffle(development)> todoList = await TodoList.deployed()   //to get a copy
+truffle(development)> todoList.address
+
+->before migrate make sure ganache is running
