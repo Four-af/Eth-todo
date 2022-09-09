@@ -17,5 +17,15 @@ truffle console
 
 truffle(development)> todoList = await TodoList.deployed()   //to get a copy
 truffle(development)> todoList.address
+truffle(development)> task = await todoList.tasks(1)
+truffle(development)> task
+truffle(development)> task.id
+truffle(development)> task.id.toNumber()
+truffle(development)> task.content
+
 
 ->before migrate make sure ganache is running
+
+
+metamask is telling so listen
+https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8

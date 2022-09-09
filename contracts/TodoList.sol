@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.5.0;
+pragma solidity >=0.4.22 <0.9.0;
  //declare version of sol pprogramming lang being used
+// pragma solidity ^0.5.0;
 
 //declare smart contract
 contract TodoList{
@@ -55,7 +56,7 @@ contract TodoList{
         //give arguments of the struct
         //args-> taskCount:id, _contnt:content, completed:false
         tasks[taskCount] = Task(taskCount,_content,false);
-        
+
     }
 
      
