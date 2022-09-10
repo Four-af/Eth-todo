@@ -86,7 +86,43 @@ App = {
     //Update app loading state
     App.setLoading(true)
     $('#account').html(App.account);
+
+    //render tasks
+    await App.renderTasks()
+
     App.setLoading(false) //updating status of loaing
+  },
+
+  renderTasks: async()=>{
+    //loading total task count
+    const taskCount = await App.todoList.taskCount()
+    const $taskTemplate = $('.taskTemplate')
+
+    //rendering each task with new template
+    for(var i =1 ; i<=taskCount;i++){
+      const task = await App.todoList.tasks(i)//fetching task data
+      const taskId = task[0].toNumber()
+      const taskContent = task[1]
+      const taskCompleted = task[2]
+
+      //create html for the task
+      const $newTaskTemplate = $taskTemplate.clone()
+      $newTaskTemplate.find('.content').html(taskContent)
+      $newTaskTemplate.find('input')
+                      .prop('name',taskId)
+                      .prop('checked',taskCompleted)
+                      // .on('click',App.toggleCompleted)
+    
+      //putting task on correcct list
+      if(taskCompleted){
+        $('#completedTaskList').append($newTaskTemplate)
+      }else{
+        $('#taskList').append($newTaskTemplate)
+      }
+      //show task
+      $newTaskTemplate.show()
+    }
+
   },
 
   setLoading: (boolean) => {
