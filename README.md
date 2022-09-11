@@ -1,4 +1,7 @@
 # Eth-todo
+
+A todo-list website based on blockchain technology powered by ethereum smart contracts
+
 sol program version declaration ```pragma solidity ^0.5.0;```
 to compile ```truffle compile```
 to run the migration ```truffle migrate```.
