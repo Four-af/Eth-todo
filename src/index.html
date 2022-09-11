@@ -18,41 +18,50 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  <style>
-    main {
-      margin-top: 60px;
-    }
-
-    #content {
-      display: none;
-    }
-
-    form {
-      width: 350px;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      margin-bottom: 0px;
-    }
-
-    #completedTaskList .content {
-      color: grey;
-      text-decoration: line-through;
-    }
-  </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://github.com/Four-af" target="_blank">AF | Four | Todo
-      List | Eth | Blockchain</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://github.com/Four-af" target="_blank">AF | Todo
+      List | Blockchain</a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
         <small><a class="nav-link" href="#"><span id="account"></span></a></small>
       </li>
     </ul>
   </nav>
+
+
+  <!-- nav ends -->
+  <div class="row">
+    <div class="col-lg-6" class="bluebg">
+      <h1 class="big-heading" id="Genshin-Impact">Genshin Impact</h1>
+      <h1 class="big-heading">My favourite place to escape to.</h1>
+      <button
+        type="button"
+        class="btn btn-dark btn-lg"
+        class="Download-btn"
+      >
+        <i class="fa-brands fa-apple"></i>Download
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-light btn-lg"
+        class="Download-btn"
+      >
+        <i class="fa-brands fa-google-play"></i>Download
+      </button>
+    </div>
+    <div class="col-lg-6">
+      <img src="images/cllg1.png" alt="ayato" class="title-img" />
+    </div>
+  </div>
+  <!-- title ends -->
   <div class="container-fluid">
     <div class="row">
       <main role="main" class="col-lg-12 d-flex justify-content-center">
@@ -60,10 +69,10 @@
           <p class="text-center">Four says Loading...</p>
         </div>
         <div id="content">
-          <!-- <form onSubmit="App.createTask(); return false;">
-              <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
+          <form onSubmit="App.createTask(); return false;">
+              <input id="newTask" type="text" class="form-control" placeholder="Four says add a task..." required>
               <input type="submit" hidden="">
-            </form> -->
+            </form>
           <ul id="taskList" class="list-unstyled">
             <div class="taskTemplate" class="checkbox" style="display: none">
               <label>
@@ -78,6 +87,13 @@
       </main>
     </div>
   </div>
+  <footer id="footer">
+    <i class="fa-brands fa-instagram fa-1x copy" class="copy"></i>
+    <i class="fa-solid fa-envelope fa-1x copy" class="copy"></i>
+    <i class="fa-brands fa-github fa-1x copy" class="copy"></i>
+    <i class="fa-brands fa-discord fa-1x copy" class="copy"></i>
+    <p>©Copyright Aiman</p>
+  </footer>
   <!-- The legacy-web3 script must run BEFORE your other scripts. -->
   <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
   <!-- <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.js"></script> -->
