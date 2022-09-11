@@ -39,6 +39,11 @@ contract TodoList {
     //solidity allows to create events
     event TaskCreated(uint256 id, string content, bool completed);
 
+    event TaskComplted(
+        uint id, bool completed
+    );
+
+
     //constructor function
     //called when smart contract is run for the first time
     ///here on deployement it will be called
@@ -62,4 +67,14 @@ contract TodoList {
         //calling event
         emit TaskCreated(taskCount, _content,false);
     }
+
+    function toggleCompleted(uint _id) public{
+        Task memory _task = tasks[_id];
+        _task.completed = !_task.completed;
+        tasks[_id] = _task;
+        emit TaskComplted(_id, _task.completed);
+    }
+    
+
+
 }
